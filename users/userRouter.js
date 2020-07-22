@@ -44,10 +44,7 @@ router.post("/login", async (req, res, next) => {
     };
 
     const token = generateToken(user);
-    res.cookie(
-      "token",
-      jwt.sign(payload, "the shire was too beautiful to behold")
-    );
+
     res.status(200).json({
       message: `Welcome ${user.username}!`,
       token,

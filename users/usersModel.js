@@ -18,14 +18,14 @@ function getUserById(id) {
 }
 
 function getUserByUserName(username) {
-  return db("users").where(username).first();
+  return db("users").where({ username }).first();
 }
 
 function AddUser(user) {
   return db("users")
     .insert(user)
     .then(ids => {
-      return getById(ids[0]);
+      return getUserById(ids[0]);
     });
 }
 

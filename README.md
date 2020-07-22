@@ -67,24 +67,27 @@ This project was done during a build week sprint at [Lambda School](https://lamb
 
 ## Base URL for Deployed API
 TBD
-<!-- ## Endpoints
-| Request | URL                  | Description                                           |
-| ------- | -------------------- | ----------------------------------------------------- |
-| POST    | api/auth/register    | register as a new user                                |
-| POST    | api/auth/login       | login as an existing user                             |
-| POST    | api/recipes/:id/user | add post for logged in user                           |
-| GET     | api/recipes          | get all recipes for all users (needs to be logged in) |
-| GET     | api/recipes/:id/user | get posts for logged in user                          |
-| GET     | api/recipes/:id      | get specific recipe for user                          |
-| PUT     | api/recipes/:id      | edit specific recipe for user                         |
-| DELETE  | api/recipes/:id      | delete specific recipe for user                       | --> |
+## Endpoints
+| Request | URL              | Description                                      |
+| ------- | ---------------- | ------------------------------------------------ |
+| POST    | users/register   | register as a new user                           |
+| POST    | users.login      | login as an existing user                        |
+| PUT     | users/update/:id | update users information, requires authorization |
+| DELETE  | users/delete/:id | delete the user, requires authorization          |
+
+
+
 # Table Requirements
 # Users
-| Name       | Type     | Required | Unique | Notes                                    |
-| ---------- | -------- | -------- | ------ | ---------------------------------------- |
-| id         | integer  | yes      | yes    | users id (auto generated)                |
-| username   | string   | yes      | yes    | users username                           |
-| password   | string   | yes      | no     | users password                           |
+| Name     | Type    | Required | Unique | Notes                     |
+| -------- | ------- | -------- | ------ | ------------------------- |
+| id       | integer | yes      | yes    | users id (auto generated) |
+| username | string  | yes      | yes    | users username            |
+| password | string  | yes      | no     | users password            |
+
+# Users
+| id         | integer  | yes      | yes    | story id (auto generated)                |
+| user-id    | string   | yes      | yes    | references the id in the user table      |
 | storyTitle | string   | no       | no     | title user gives to story                |
 | storyAdded | datetime | yes      | no     | when the story was added or last updated |
 | storyDate  | datetime | no       | no     | title user gives to story                |

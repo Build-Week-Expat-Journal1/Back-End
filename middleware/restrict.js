@@ -1,3 +1,4 @@
+const Users = require("../users/usersModel");
 const jwt = require("jsonwebtoken");
 
 function restrict() {
