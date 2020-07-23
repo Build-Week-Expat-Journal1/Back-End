@@ -85,13 +85,33 @@ TBD
 | username | string  | yes      | yes    | users username            |
 | password | string  | yes      | no     | users password            |
 
-# Users
+# Stories
+| Name     | Type    | Required | Unique | Notes                     |
 | id         | integer  | yes      | yes    | story id (auto generated)                |
-| user-id    | string   | yes      | yes    | references the id in the user table      |
+| user-id    | integer   | yes      | yes    | references the id in the user table      |
 | storyTitle | string   | no       | no     | title user gives to story                |
 | storyAdded | datetime | yes      | no     | when the story was added or last updated |
 | storyDate  | datetime | no       | no     | title user gives to story                |
 | story      | string   | no       | yes    | title user gives to story(max 3000 char) |
 | photo      | string   | no       | no     | image url                                |
 
+### Users
+​
+```
+{
+  username: string, ***REQUIRED***
+  password: string ***REQUIRED***  
+}
+```
 
+###Stories
+```
+{
+  user_id: integer, ***REQUIRED***  
+  storyTitle: string,
+  storyAdded: datetime, ***REQUIRED***  
+  storyDate: datetime,
+  story: string, ***REQUIRED***  
+  photo: string (url)
+}
+```
