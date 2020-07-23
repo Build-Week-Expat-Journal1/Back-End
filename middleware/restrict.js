@@ -8,17 +8,13 @@ function restrict() {
 
     try {
       const token = req.headers.token;
+
       if (!token) {
-        return res.status(401).json(authError);
+        return res.status(401).json(authError3);
       }
 
-      jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-        if (err) {
-          return res.status(401).json(authError);
-        } else {
-          req.user = decoded.user;
-          next();
-        }
+      jwt.verify(token, "some ssecret", (err, decoded) => {
+        return res.status(401).json(authError);
       });
     } catch (err) {
       next(err);

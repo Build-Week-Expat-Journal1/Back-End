@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const Users = require("./usersModel");
 const restrict = require("../middleware/restrict");
 const jwt = require("jsonwebtoken");
-const validateUser = require("../middleware/verifyUser");
+// const validateUser = require("../middleware/verifyUser");
 const router = express.Router();
 
 router.post("/register", async (req, res, next) => {
@@ -39,10 +39,6 @@ router.post("/login", async (req, res, next) => {
         message: "Invalid Credentials",
       });
     }
-    const payload = {
-      userId: user.id,
-      username: user.username,
-    };
 
     const token = generateToken(user);
     const userInfo = { id: user.id, username: user.username };
@@ -66,8 +62,9 @@ router.put("/update/:id", async (req, res, next) => {
 
       password: await bcrypt.hash(password, 10),
     });
-
-    res.status(201).json(newUser);
+    const user = await Users.getUserById(id);
+    const userInfo = { id: user.id, username: user.username };
+    res.status(201).json(userInfo);
   } catch (err) {
     next(err);
   }
