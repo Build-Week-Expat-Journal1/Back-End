@@ -3,6 +3,7 @@ const bcrypt = require("bcryptjs");
 const Users = require("./usersModel");
 const restrict = require("../middleware/restrict");
 const jwt = require("jsonwebtoken");
+const validateUser = require("../middleware/verifyUser");
 const router = express.Router();
 
 router.post("/register", async (req, res, next) => {
@@ -44,9 +45,10 @@ router.post("/login", async (req, res, next) => {
     };
 
     const token = generateToken(user);
-
+    const userInfo = { id: user.id, username: user.username };
     res.status(200).json({
       message: `Welcome ${user.username}!`,
+      userInfo,
       token,
     });
   } catch (err) {
@@ -54,10 +56,11 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-router.put("/update/:id", restrict, async (req, res, next) => {
+router.put("/update/:id", async (req, res, next) => {
   try {
     const { username, password } = req.body;
     const id = req.params.id;
+
     const newUser = await Users.updateUser(id, {
       username,
 
@@ -90,7 +93,7 @@ function generateToken(user) {
     expiresIn: "1d",
   };
 
-  return jwt.sign(payload, "the shire was too beautiful to behold", options); // this method is synchronous
+  return jwt.sign(payload, process.env.JWT_SECRET, options); // this method is synchronous
 }
 
 module.exports = router;

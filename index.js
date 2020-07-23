@@ -1,6 +1,8 @@
 const express = require("express");
 
 const cors = require("cors");
+const dotenv = require("dotenv");
+dotenv.config();
 // const jokesRouter = require("./jokes/jokes-router");
 const usersRouter = require("./users/userRouter");
 

@@ -1,4 +1,3 @@
-const Users = require("../users/usersModel");
 const jwt = require("jsonwebtoken");
 
 function restrict() {
@@ -13,17 +12,14 @@ function restrict() {
         return res.status(401).json(authError);
       }
 
-      jwt.verify(
-        token,
-        "the shire was too beautiful to behold",
-        (err, decoded) => {
-          if (err) {
-            return res.status(401).json(authError);
-          }
-
+      jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+        if (err) {
+          return res.status(401).json(authError);
+        } else {
+          req.user = decoded.user;
           next();
         }
-      );
+      });
     } catch (err) {
       next(err);
     }

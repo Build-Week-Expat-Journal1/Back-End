@@ -71,7 +71,7 @@ TBD
 | Request | URL              | Description                                      |
 | ------- | ---------------- | ------------------------------------------------ |
 | POST    | users/register   | register as a new user                           |
-| POST    | users.login      | login as an existing user                        |
+| POST    | users/login      | login as an existing user                        |
 | PUT     | users/update/:id | update users information, requires authorization |
 | DELETE  | users/delete/:id | delete the user, requires authorization          |
 
