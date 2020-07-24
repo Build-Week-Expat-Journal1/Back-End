@@ -52,7 +52,7 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-router.put("/update/:id", async (req, res, next) => {
+router.put("/update/:id", restrict, async (req, res, next) => {
   try {
     const { username, password } = req.body;
     const id = req.params.id;
@@ -70,7 +70,7 @@ router.put("/update/:id", async (req, res, next) => {
   }
 });
 
-router.delete("/delete/:id", async (req, res, next) => {
+router.delete("/delete/:id", restrict, async (req, res, next) => {
   try {
     const id = req.params.id;
     await Users.deleteUser(id);
