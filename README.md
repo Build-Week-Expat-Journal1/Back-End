@@ -11,7 +11,7 @@
   - [Target Audience](#target-audience)
   - [Features](#features)
   - [Contributors To This Project](#contributors-to-this-project)
-  - [Tech Stack Use](#contributors-to-this-project)
+  - [Tech Stack Used](#contributors-to-this-project)
   - [Project Info](#project-info)
   - [Get Started With This Repo](#get-started-with-this-repo)
   - [Documentation](#documentation)
@@ -52,7 +52,7 @@
 7. postgress in production
 
 # Project Info
-This project was done during a build week sprint at [Lambda School](https://lambdaschool.com). Part time students stretch this build over two weeks. They have 9 class nights of 3 hours to work on the project, complete stand up meetings before every day and at the end of specified days, and one timed, multiple-choice assessment for the unit they have just completed. Students work in cross-fuctional teams using GitHub, Trello, Slack, and Zoom to facillate remote work.
+This project was done during a build week sprint at [Lambda School](https://lambdaschool.com). Part time students stretch this build over two weeks. They have 9 class nights of 3 hours to work on the project, complete stand up meetings before every day and at the end of specified days, and one timed, multiple-choice assessment for the unit they have just completed. Students work in cross-functional teams using GitHub, Trello, Slack, and Zoom to facilitate remote work.
 ## Build Sprint Mission
 >Empower students to demonstrate unit mastery over their learning objectives.
 

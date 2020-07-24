@@ -1,21 +1,30 @@
 exports.seed = function (knex) {
-  return knex("stories").insert([
+  return knex(`stories`).insert([
     {
       user_id: 1,
-      storytitle: "Shine of Rainbows, A",
-      storyAdded: "8/21/2019",
-      storyDate: "5/11/2020",
+      storytitle: `Shine of Rainbows, A`,
+      storyAdded: `8/21/2019`,
+      storyDate: `5/11/2020`,
       story: `Pressgang gunwalls Blimey crack Jennys tea cup sloop lugger line aye rum reef. Skysail coffer handsomely prow gangway parley driver fathom interloper league. Bring a spring upon her cable rum no prey, no pay Jolly Roger hail-shot heave down Barbary Coast jury mast chandler gaff. 
         Crack Jennys tea cup Letter of Marque Brethren of the Coast gangplank Cat o'nine tails nipperkin hands rutters booty cable. Maroon to go on account execution dock splice the main brace pinnace run a shot across the bow gally rum Letter of Marque brigantine. Port prow Sea Legs grapple booty lugsail pinnace Spanish Main aft red ensign.
         Ahoy gally trysail gun provost tack yardarm fathom hulk brigantine. Topsail brig Barbary Coast code of conduct bilge water sloop piracy main sheet gunwalls jury mast. Heave to fathom careen bilge rat heave down yawl Letter of Marque hearties lugger handsomely.`,
-      img: "http://dummyimage.com/171x171.png/ff4444/ffffff",
+      img: `http://dummyimage.com/171x171.png/ff4444/ffffff`,
+    },
+    {
+      user_id: 3,
+      storytitle: `it was a long night`,
+      storyDate: `5/11/2020`,
+      storyAdded: `5/31/2020`,
+      story: `Arabica Acerbic Affogato Aftertaste Aged Americano And Aroma breve, plunger organic shot whipped saucer id . Body mazagran id Con latte viennese At macchiato Cappuccino, lungo foam Aged Aroma redeye Au acerbic, iced and saucer cup skinny dripper con. Go ristretto Cappuccino flavour est con affogato single extraction body, id variety dripper whipped shot that lungo et, Americano  arabica foam shop breve fair Body. Sweet Arabica Acerbic sugar shop cream Bar press half bar, body single Aftertaste redeye barista rich qui spoon, shot at mazagran dripper extra id con cappuccino. Variety As white half And decaffeinated caramelization extraction, dripper as latte Au Barista acerbic, body shot Beans carajillo sit Arabica.
+        Extraction cup Aromatic espresso and to au caramelization filter mazagran, percolator aged acerbic dripper crema Acerbic Au eu fair, As aroma Cappuccino foam medium  seasonal turkish. Chicory Au redeye sugar at that caramelization macchiato black, bar beans trade cappuccino shot body grinder au, aroma et mocha barista shop Beans percolator. Blue latte Blue id viennese mazagran eu As single Acerbic, cup decaffeinated crema saucer lait half froth aroma, shot au dripper at Aromatic bar redeye grinder. Americano ristretto grounds turkish body single foam dark chicory dripper, qui mazagran percolator bar Au Aromatic Arabica aged, mug press go as seasonal Aroma decaffeinated flavour. Cortado percolator Aged as panna extraction shot brewed spice redeye origin single medium robust, sweet spoon go acerbic seasonal rich irish Bar froth espresso fair And.
+        Spice iced grinder dark caramelization, medium origin Americano affogato press, skinny go And. To aged breve mountain Aged shot pumpkin go, bar pot iced as java cream extraction, Blue flavour grounds As frappuccino robust. Origin foam cappuccino aroma turkish french Con single saucer carajillo grounds to, instant white cream lait whipped crema cinnamon beans rich froth bar, dripper medium at body latte Cappuccino shot au plunger trade. Espresso lungo Aged go Aroma Acerbic fair Affogato viennese plunger qui acerbic, instant frappuccino medium carajillo trifecta blue percolator As black at that white, macchiato est panna lait to filter as organic Body cinnamon. Steamed And cortado sweet americano crema cream whipped pumpkin, mazagran Brewed chicory and press spice iced rich strong, go saucer espresso froth  so Barista. Press steamed origin Beans instant espresso pot latte ristretto plunger sweet mountain At decaffeinated, americano Body et go redeye brewed french foam so black half froth.`,
     },
 
     {
       user_id: 2,
-      storytitle: "Romero",
-      storyAdded: "3/11/2020",
-      storyDate: "5/31/2020",
+      storytitle: `Romero`,
+      storyAdded: `3/11/2020`,
+      storyDate: `5/31/2020`,
       story: `Pitchfork authentic woke tattooed. Occupy la croix unicorn banjo, put a bird on it farm-to-table fingerstache jean shorts pug DIY gochujang. Edison bulb mustache meggings iceland, put a bird on it scenester pitchfork vaporware pinterest plaid four loko actually. Leggings flexitarian chillwave viral gochujang lumbersexual gluten-free semiotics deep v authentic, crucifix mumblecore umami swag chia.
   
         Chambray butcher hoodie fanny pack organic, lomo umami williamsburg taxidermy +1. Viral organic cred tumeric. Etsy slow-carb vice disrupt blog four loko wolf trust fund food truck microdosing tattooed health goth single-origin coffee cornhole. Brunch disrupt health goth hella palo santo irony godard biodiesel man braid vaporware retro street art freegan DIY.
@@ -25,13 +34,13 @@ exports.seed = function (knex) {
         YOLO meh iPhone messenger bag PBR&B, copper mug coloring book plaid next level woke iceland street art enamel pin prism. Freegan small batch dreamcatcher jianbing heirloom gastropub. Taxidermy fashion axe kale chips cliche sriracha freegan heirloom. Blog pork belly authentic bushwick, hoodie sustainable pok pok.
         
         Edison bulb pok pok bicycle rights affogato viral. Vape authentic readymade listicle VHS palo santo. Thundercats marfa freegan, asymmetrical blue bottle sustainable put a bird on it whatever keytar tbh craft beer vexillologist art party woke iPhone. Paleo listicle hammock, microdosing raclette snackwave kickstarter.`,
-      img: "http://dummyimage.com/181x170.bmp/5fa2dd/ffffff",
+      img: `http://dummyimage.com/181x170.bmp/5fa2dd/ffffff`,
     },
     {
       user_id: 3,
-      storytitle: "Bullet to the Head",
-      storyAdded: "8/7/2019",
-      storyDate: "6/11/2020",
+      storytitle: `Bullet to the Head`,
+      storyAdded: `8/7/2019`,
+      storyDate: `6/11/2020`,
       story: `I love cheese, especially danish fontina emmental. Melted cheese lancashire st. agur blue cheese cauliflower cheese stinking bishop melted cheese rubber cheese bocconcini. Cheese and biscuits melted cheese squirty cheese port-salut smelly cheese fromage frais manchego cheese strings. Edam who moved my cheese cheesy grin stinking bishop cheese and wine babybel gouda queso. St. agur blue cheese the big cheese macaroni cheese.
   
         Paneer cottage cheese fromage. Jarlsberg fromage st. agur blue cheese say cheese bocconcini jarlsberg red leicester emmental. Danish fontina pecorino stilton camembert de normandie the big cheese who moved my cheese parmesan jarlsberg. Halloumi.
@@ -41,13 +50,13 @@ exports.seed = function (knex) {
         Cheese and wine lancashire pepper jack. Halloumi paneer lancashire cheese strings taleggio brie monterey jack bocconcini. Feta lancashire babybel who moved my cheese cow cheesecake cauliflower cheese taleggio. Cottage cheese jarlsberg.
         
         Emmental chalk and cheese macaroni cheese. Port-salut red leicester cottage cheese port-salut melted cheese halloumi parmesan fondue. Monterey jack cheesy grin when the cheese comes out everybody's happy goat swiss cream cheese jarlsberg squirty cheese. Dolcelatte ricotta cheddar cheese triangles mascarpone who moved my cheese.`,
-      img: "http://dummyimage.com/187x191.png/cc0000/ffffff",
+      img: `http://dummyimage.com/187x191.png/cc0000/ffffff`,
     },
     {
       user_id: 4,
       storytitle: null,
-      storyAdded: "10/14/2019",
-      storyDate: "12/19/2019",
+      storyAdded: `10/14/2019`,
+      storyDate: `12/19/2019`,
       story: `Cheesecake ice cream sesame snaps muffin sweet cake. Liquorice I love dragée powder jelly beans marshmallow biscuit jujubes. Tart marzipan jelly-o gummies pastry biscuit. I love toffee soufflé marshmallow dragée.
   
         I love caramels dragée cake I love. Caramels chocolate bar apple pie gummies liquorice marshmallow marshmallow cake. Chocolate sugar plum cookie chupa chups danish I love sugar plum jelly-o. Lollipop pudding ice cream soufflé.
@@ -57,9 +66,9 @@ exports.seed = function (knex) {
     },
     {
       user_id: 5,
-      storytitle: "Adventures of a Dentist",
-      storyAdded: "3/12/2020",
-      storyDate: "2/24/2020",
+      storytitle: `Adventures of a Dentist`,
+      storyAdded: `3/12/2020`,
+      storyDate: `2/24/2020`,
       story: `Twitch tail in permanent irritation ears back wide eyed for this is the day . Meow all night stare at ceiling light. Jump off balcony, onto stranger's head bleghbleghvomit my furball really tie the room together and the dog smells bad. And sometimes switches in french and say "miaou" just because well why not licks your face so poop in the plant pot but woops poop hanging from butt must get rid run run around house drag poop on floor maybe it comes off woops left brown marks on floor human slave clean lick butt now, yet chase dog then run away. Mouse chase after silly colored fish toys around the house yet find a way to fit in tiny box sit in a box for hours scratch me there, elevator butt claw at curtains stretch and yawn nibble on tuna ignore human bite human hand. 𝕄𝔼𝕆𝕎 you have cat to be kitten me right meow run up and down stairs, i show my fluffy belly but it's a trap! if you pet it i will tear up your hand always ensure to lay down in such a manner that tail can lightly brush human's nose or in the middle of the night i crawl onto your chest and purr gently to help you sleep eat all the power cords. Ask to be pet then attack owners hand lick the other cats or the cat was chasing the mouse. Cat mojo ask to be pet then attack owners hand meow for food, then when human fills food dish, take a few bites of food and continue meowing. Get suspicious of own shadow then go play with toilette paper. The door is opening! how exciting oh, it's you, meh my cat stared at me he was sipping his tea, too my slave human didn't give me any food so i pooped on the floor destroy couch as revenge and stand in doorway, unwilling to chose whether to stay in or go out. It's 3am, time to create some chaos fight own tail but instead of drinking water from the cat bowl, make sure to steal water from the toilet. Sit on human really likes hummus sit on the laptop, a nice warm laptop for me to sit on. Walk on keyboard bite plants for put toy mouse in food bowl run out of litter box at full speed a nice warm laptop for me to sit on yet stare at guinea pigs, it's 3am, time to create some chaos mewl for food at 4am. Get suspicious of own shadow then go play with toilette paper stare at owner accusingly then wink. I can haz. Jump off balcony, onto stranger's head.
   
   Litter box is life shake treat bag, yet plan steps for world domination while happily ignoring when being called milk the cow find a way to fit in tiny box or attack dog, run away and pretend to be victim. Roll over and sun my belly spend six hours per day washing, but still have a crusty butthole yet chew foot, for i is not fat, i is fluffy but my left donut is missing, as is my right intently sniff hand, so rub my belly hiss. Attack dog, run away and pretend to be victim please let me outside pouty face yay! wait, it's cold out please let me inside pouty face oh, thank you rub against mommy's leg oh it looks so nice out, please let me outside again the neighbor cat was mean to me please let me back inside or cats woo run at 3am. Human is washing you why halp oh the horror flee scratch hiss bite. Cat walks in keyboard find empty spot in cupboard and sleep all day for scream for no reason at 4 am. Rub face on owner. Love and coo around boyfriend who purrs and makes the perfect moonlight eyes so i can purr and swat the glittery gleaming yarn to him (the yarn is from a $125 sweater) scratch my tummy actually i hate you now fight me. Enslave the hooman scratch the box but sleep on keyboard. Do i like standing on litter cuz i sits when i have spaces, my cat buddies have no litter i live in luxury cat life bathe private parts with tongue then lick owner's face, or stand with legs in litter box, but poop outside but look at dog hiiiiiisssss. Good now the other hand, too cat walks in keyboard be a nyan cat, feel great about it, be annoying 24/7 poop rainbows in litter box all day i is not fat, i is fluffy for fall asleep upside-down so chew the plant chirp at birds. No, you can't close the door, i haven't decided whether or not i wanna go out wake up human for food at 4am. Plan your travel eat a rug and furry furry hairs everywhere oh no human coming lie on counter don't get off counter but show belly, eat a plant, kill a hand. I just saw other cats inside the house and nobody ask me before using my litter box cats are cute has closed eyes but still sees you but lick sellotape i shredded your linens for you yet terrorize the hundred-and-twenty-pound rottweiler and steal his bed, not sorry and walk on keyboard . Vommit food and eat it again my left donut is missing, as is my right but lick face hiss at owner, pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back or cereal boxes make for five star accommodation or pet me pet me pet me pet me, bite, scratch, why are you petting me toilet paper attack claws fluff everywhere meow miao french ciao litterbox meowing non stop for food. Don't nosh on the birds terrorize the hundred-and-twenty-pound rottweiler and steal his bed, not sorry run up and down stairs lick face hiss at owner, pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back. Give me attention or face the wrath of my claws sleeps on my head. Hiss at vacuum cleaner dont wait for the storm to pass, dance in the rain. Cry louder at reflection meoooow friends are not food, yet hunt anything that moves. Love you, then bite you catch eat throw up catch eat throw up bad birds so hide head under blanket so no one can see run in circles being gorgeous with belly side up. Pose purrfectly to show my beauty stand in front of the computer screen, so find a way to fit in tiny box but cat walks in keyboard . While happily ignoring when being called poop on floor and watch human clean up or white cat sleeps on a black shirt curl up and sleep on the freshly laundered towels i am the best peer out window, chatter at birds, lure them to mouth.
@@ -83,7 +92,7 @@ exports.seed = function (knex) {
   Make it to the carpet before i vomit mmmmmm need to check on human, have not seen in an hour might be dead oh look, human is alive, hiss at human, feed me groom yourself 4 hours - checked, have your beauty sleep 18 hours - checked, be fabulous for the rest of the day - checked kitty loves pigs so adventure always. Rub whiskers on bare skin act innocent claws in the eye of the beholder. Lick plastic bags meow lick master's hand at first then bite because im moody yet litter kitter kitty litty little kitten big roar roar feed me annoy the old grumpy cat, start a fight and then retreat to wash when i lose. Have a lot of grump in yourself because you can't forget to be grumpy and not be like king grumpy cat scratch at fleas, meow until belly rubs, hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food yet cat cat moo moo lick ears lick paws my left donut is missing, as is my right intrigued by the shower. Bite the neighbor's bratty kid weigh eight pounds but take up a full-size bed. Hunt anything that moves kick up litter and i’m so hungry i’m so hungry but ew not for that for soft kitty warm kitty little ball of furr who's the baby. Lie in the sink all day dead stare with ears cocked or scratch the furniture attack the child. Cats are the world if it fits i sits stare out the window have secret plans. Kitty time. Bite the neighbor's bratty kid bite off human's toes but love and coo around boyfriend who purrs and makes the perfect moonlight eyes so i can purr and swat the glittery gleaming yarn to him (the yarn is from a $125 sweater). Refuse to come home when humans are going to bed; stay out all night then yowl like i am dying at 4am run at 3am what a cat-ass-trophy!, refuse to leave cardboard box, it's 3am, time to create some chaos sit in a box for hours. Purr like a car engine oh yes, there is my human slave woman she does best pats ever that all i like about her hiss meow purrrrrr, kitten is playing with dead mouse get video posted to internet for chasing red dot for claws in your leg and be superior meowwww.
   
   Cough furball lick the other cats, and milk the cow. Check cat door for ambush 10 times before coming in why use post when this sofa is here run around the house at 4 in the morning and sleeps on my head. Scratch at fleas, meow until belly rubs, hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food pet me pet me don't pet me pretend you want to go out but then don't. Eat a rug and furry furry hairs everywhere oh no human coming lie on counter don't get off counter murder hooman toes for go into a room to decide you didn't want to be in there anyway run outside as soon as door open so slap kitten brother with paw. Love me! caticus cuteicus run as fast as i can into another room for no reason. Roll over and sun my belly you are a captive audience while sitting on the toilet, pet me yet more napping, more napping all the napping is exhausting so ask to go outside and ask to come inside and ask to go outside and ask to come inside claw drapes, or i hate cucumber pls dont throw it at me. Try to hold own back foot to clean it but foot reflexively kicks you in face, go into a rage and bite own foot, hard pee in human's bed until he cleans the litter box yet check cat door for ambush 10 times before coming in so swat turds around the house or bleghbleghvomit my furball really tie the room together and shove bum in owner's face like camera lens. It's 3am, time to create some chaos rub my belly hiss cat slap dog in face rub face on owner. Instantly break out into full speed gallop across the house for no reason if it smells like fish eat as much as you wish. Pounce on unsuspecting person see brother cat receive pets, attack out of jealousy eat the fat cats food claw drapes. Chase mice poop on grasses toy mouse squeak roll over, i will be pet i will be pet and then i will hiss, eats owners hair then claws head and hide head under blanket so no one can see. Flex claws on the human's belly and purr like a lawnmower cat walks in keyboard sleeps on my head.`,
-      img: "http://dummyimage.com/285x233.bmp/dddddd/000000",
+      img: `http://dummyimage.com/285x233.bmp/dddddd/000000`,
     },
   ]);
 };
