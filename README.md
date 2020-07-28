@@ -121,7 +121,7 @@ All routes require authorization
 }
 ```
 
-###Stories
+### Stories
 ```
 {
   user_id: integer, ***REQUIRED***  

@@ -1,4 +1,4 @@
-const db = require("../database/dbConfig");
+const db = require('../database/dbConfig');
 
 module.exports = {
   getAllStories,
@@ -11,14 +11,12 @@ module.exports = {
 };
 
 function getAllStories() {
-  return db("stories").select("user_id", "id", "storyTitle", "storyDate", "story", "img");
+  return db('stories');
+  // .select("user_id", "id", "storyTitle", "storyDate", "story", "img");
 }
 
 function getStoryById(id) {
-  return db("stories")
-    .select("id", "storyTitle", "storyDate", "story", "img")
-    .where({ id })
-    .first();
+  return db('stories').select('*').where({ id }).first();
 }
 
 // function getStoryByUserName(username) {
@@ -29,13 +27,11 @@ function getStoryById(id) {
 //     .first();
 // }
 function getStoryByUserId(user_id) {
-  return db("stories")
-    .select("id", "storyTitle", "storyDate", "story", "img")
-    .where(user_id);
+  return db('stories').where(user_id);
 }
 
 function AddStory(story) {
-  return db("stories")
+  return db('stories')
     .insert(story)
     .then(id => {
       getStoryById(id[0]);
@@ -43,10 +39,10 @@ function AddStory(story) {
 }
 
 function updateStory(id, changes) {
-  db("stories").where(id).update(changes)
+  db('stories').where(id).update(changes);
   return getStoryById(id);
 }
 
 function deleteStory(id) {
-  return db("stories").where("id", id).del();
+  return db('stories').where('id', id).del();
 }

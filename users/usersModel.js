@@ -10,7 +10,7 @@ module.exports = {
 };
 
 function getAllUsers() {
-  return db("users").select(id, username);
+  return db("users").select("*");
 }
 
 function getUserById(id) {
