@@ -25,7 +25,8 @@ function getStoryByUserName(username) {
     .join('users as u', 'u.id', 's.user_id')
     .select(
       'u.username',
-      's.id',
+      'u.id as user_id',
+      's.id as story_id',
       's.storyTitle',
       's.storyDate',
       's.story',
@@ -36,14 +37,22 @@ function getStoryByUserId(id) {
   return db('stories as s')
     .where('user_id', id)
     .join('users as u', 'u.id', 's.user_id')
-    .select('*');
+    .select(
+      'u.username',
+      'u.id as user_id',
+      's.id as story_id',
+      's.storyTitle',
+      's.storyDate',
+      's.story',
+      's.img'
+    );
 }
 
 function AddStory(story) {
   return db('stories')
     .insert(story)
-    .then(id => {
-      getStoryById(id[0]);
+    .then(ids => {
+      getStoryById(ids[0]);
     });
 }
 

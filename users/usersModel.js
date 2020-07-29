@@ -7,7 +7,6 @@ module.exports = {
   AddUser,
   updateUser,
   deleteUser,
-  // getStoryByUserId,
 };
 
 function getAllUsers() {
@@ -21,13 +20,6 @@ function getUserById(id) {
 function getUserByUserName(username) {
   return db('users').where({ username });
 }
-// function getStoryByUserId(user_id) {
-//   return db('stories as s')
-//     .join('users as u', 'u.id', 's.user_id')
-//     .select('u.username', 's.storyTitle', 's.id', 's.storyDate')
-//     .where('s.user_id', user_id);
-// }
-
 function AddUser(user) {
   return db('users')
     .insert(user)

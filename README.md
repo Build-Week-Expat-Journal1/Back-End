@@ -122,7 +122,7 @@ All routes require authorization
 | storyTitle | string   | no       | no     | title user gives to story                |
 | storyAdded | datetime | yes      | no     | when the story was added or last updated |
 | storyDate  | datetime | no       | no     | title user gives to story                |
-| story      | string   | no       | no     | the users story (max 3000 char)          |
+| story      | string   | yes      | no     | the users story (max 3000 char)          |
 | img        | string   | no       | no     | image url                                |
 
 ### Users
