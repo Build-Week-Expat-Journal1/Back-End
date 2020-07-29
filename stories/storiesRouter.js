@@ -54,18 +54,30 @@ router.get('/:userid', restrict, async (req, res, next) => {
     //   }
     // });
     const user_id = req.params.id;
-    const user = Users.getUserById(user_id);
+    //   const user = Users.getUserById(user_id);
 
-    const stories = await Stories.getStoryByUserId(user.user_id);
+    const users = await Stories.getStoryByUserId(user_id);
 
-    if (!stories) {
+    if (!users) {
       res.status(404).json({ message: 'no stories found for this user' });
     }
 
-    res.status(200).status(stories);
+    res.status(200).status(users);
   } catch (err) {
     next(err);
   }
+  // router.get('/:id', restrict, async (req, res, next) => {
+  //   try {
+  //     const id = req.params.id;
+  //     const stories = await Users.getStoryById(id);
+  //     if (!stories) {
+  //       res.status(404).json({ message: 'Story not found' });
+  //     }
+  //     res.status(200).json(user);
+  //   } catch (err) {
+  //     next(err);
+  //   }
+  // });
 });
 
 router.post('/add', restrict, async (req, res, next) => {
@@ -81,14 +93,8 @@ router.post('/add', restrict, async (req, res, next) => {
 router.put('/update/:id', restrict, async (req, res, next) => {
   try {
     const id = req.params.id;
-    const { storyTitle, storyDate, story, img } = req.body;
-    const newStory = await Stories.updateStory(id, {
-      storyTitle,
-      storyDate,
-      story,
-      img,
-    });
-
+    const changes = req.body;
+    const newStory = await Stories.updateStory(id, changes);
     res.status(202).json(newStory);
   } catch (err) {
     next(err);

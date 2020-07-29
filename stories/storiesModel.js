@@ -27,7 +27,7 @@ function getStoryById(id) {
 //     .first();
 // }
 function getStoryByUserId(user_id) {
-  return db('stories').where(user_id);
+  return db('stories').where('user_id', user_id);
 }
 
 function AddStory(story) {
@@ -39,8 +39,8 @@ function AddStory(story) {
 }
 
 function updateStory(id, changes) {
-  db('stories').where(id).update(changes);
-  return getStoryById(id);
+  return db('stories').where('id', id).update(changes);
+  // return getStoryById(id);
 }
 
 function deleteStory(id) {
