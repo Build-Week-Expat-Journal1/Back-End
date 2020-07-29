@@ -39,15 +39,16 @@ Expats, people who want to become expats, others who want to organize their adve
 4. Upload a picture and add geolocation meta-data from picture or assign location of where it was taken
 
 
-[**Read Full Product Vision Document**](./files/Copy of Expat Journal PVD.pdf)
+
+[**Read Full Product Vision Document**](./files/Copy%20of%20Expat%20Journal%20PVD.pdf)
 
 ---
 # Contributors To This Project
 - Project Lead: [Ricardo Leite](https://github.com/ricardo-ljr)
 - Marketing Page: [Melanie Chele](https://github.com/melaniechele)
 - Front End Developer:[Anna Hangstefer](https://github.com/AHangstefer) & [E Jonathan Munoz](https://github.com/Johnjohnn)
-- Front End Framework Developers = [Sarah Lawrence](https://github.com/SarahMLawrence) & [Austin Healy](https://github.com/AustinJHealy)
-- Database and API-[Jennifer Weiner](https://github.com/weinerjm14) 
+- Front End Framework Developers: [Sarah Lawrence](https://github.com/SarahMLawrence) & [Austin Healy](https://github.com/AustinJHealy)
+- Database and API: [Jennifer Weiner](https://github.com/weinerjm14) 
   
 
 # Tech Stack Use
@@ -58,6 +59,7 @@ Expats, people who want to become expats, others who want to organize their adve
 4. nodemon
 5. jsonwebtoken
 6. sqlite3
+7. Jest and supertest
 
 # Project Info
 This project was done during a build week sprint at [Lambda School](https://lambdaschool.com). Part time students stretch this build over two weeks. They have 9 class nights of 3 hours to work on the project, complete stand up meetings before every day and at the end of specified days, and one timed, multiple-choice assessment for the unit they have just completed. Students work in cross-functional teams using GitHub, Trello, Slack, and Zoom to facilitate remote work.
@@ -120,7 +122,7 @@ All routes require authorization
 | storyTitle | string   | no       | no     | title user gives to story                |
 | storyAdded | datetime | yes      | no     | when the story was added or last updated |
 | storyDate  | datetime | no       | no     | title user gives to story                |
-| story      | string   | no       | yes    | title user gives to story(max 3000 char) |
+| story      | string   | no       | no     | the users story (max 3000 char)          |
 | img        | string   | no       | no     | image url                                |
 
 ### Users
