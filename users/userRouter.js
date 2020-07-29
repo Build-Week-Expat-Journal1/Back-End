@@ -6,6 +6,28 @@ const jwt = require("jsonwebtoken");
 // const validateUser = require("../middleware/verifyUser");
 const router = express.Router();
 
+router.get("/", restrict, async (req, res, next) => {
+  try {
+    const users = await Users.getAllUsers();
+    res.status(200).json(users);
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.get("/:id", restrict, async (req, res, next) => {
+  try {
+    const id = req.params.id;
+
+    const user = await Users.getUserById(id);
+    if (!user) {
+      res.status(404).json({ message: "User not found" });
+    }
+    res.status(200).json(user);
+  } catch (err) {
+    next(err);
+  }
+});
 router.post("/register", async (req, res, next) => {
   try {
     const { username, password } = req.body;
@@ -24,8 +46,8 @@ router.post("/register", async (req, res, next) => {
 router.post("/login", async (req, res, next) => {
   try {
     const { username, password } = req.body;
-    const user = await Users.getUserByUserName(username);
-
+    const user = await Users.getUserByUserName(username).first();
+    console.log(user)
     if (!user) {
       return res.status(401).json({
         message: "Invalid Credentials",

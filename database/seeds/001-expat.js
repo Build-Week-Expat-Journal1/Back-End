@@ -1,4 +1,4 @@
-const hashpw = "$2y$10$1R6N9DQPsggroTJLV0tPB.afwZkrUFbmcykfx9YTUrAoXnONSMehu";
+const hashpw = "$2y$10$OrZtcKwNkoHZhbb6WjpoUe0ZJrYh2dXxhYbSWDiBqxCh3tLAz5y.u";
 
 exports.seed = function (knex) {
   // Deletes ALL existing entries

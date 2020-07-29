@@ -8,7 +8,7 @@ module.exports = (req, res, next) => {
                 if (err) {
                     console.log(err);
                     res.status(401).
-                        json({ status: 401, message: "Invalid Credentials 0" });
+                        json({ status: 401, message: "Invalid Credentials" });
                 } else {
                     req.decodedToken = decodedToken;
                     next();
@@ -16,9 +16,9 @@ module.exports = (req, res, next) => {
             });
         } else {
             res.status(401).
-                json({ message: "Invalid Credentials 1", status: 401 });
+                json({ message: "Invalid Credentials", status: 401 });
         }
-    } catch (e) {
-        console.log(e);
+    } catch (err) {
+        console.log(err);
     }
 };

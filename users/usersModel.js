@@ -10,7 +10,7 @@ module.exports = {
 };
 
 function getAllUsers() {
-  return db("users").select(id, username);
+  return db("users").select("*");
 }
 
 function getUserById(id) {
@@ -18,7 +18,7 @@ function getUserById(id) {
 }
 
 function getUserByUserName(username) {
-  return db("users").where({ username }).first();
+  return db("users").where({ username });
 }
 
 function AddUser(user) {
