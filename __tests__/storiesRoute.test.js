@@ -127,3 +127,60 @@ test('add story', async () => {
 //   );
 //   expect(getAllStories.body.message).toBe('Story is gone');
 // });
+
+test('get all users', async () => {
+  const getallusers = await supertest(server)
+    .get('/users')
+    .set(
+      'Authorization',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo3LCJ1c2VybmFtZSI6ImRyYWNvIHRoZSBkcmFnb240IiwiaWF0IjoxNTk1OTc2ODc4LCJleHAiOjE1OTYwNjMyNzh9.M4bWMrbaJizL_8Mn972YFQJjfLc_Xhf5C5pRS3FmGGg'
+    );
+  expect(getallusers.statusCode).toBe(200);
+  expect(getallusers.headers['content-type']).toBe(
+    'application/json; charset=utf-8'
+  );
+  expect(getallusers.body.length).toBe(5);
+  expect(getallusers.body[2].username).toBe('myacob2');
+});
+test('get user by id', async () => {
+  const getallusers = await supertest(server)
+    .get('/users/1')
+    .set(
+      'Authorization',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo3LCJ1c2VybmFtZSI6ImRyYWNvIHRoZSBkcmFnb240IiwiaWF0IjoxNTk1OTc2ODc4LCJleHAiOjE1OTYwNjMyNzh9.M4bWMrbaJizL_8Mn972YFQJjfLc_Xhf5C5pRS3FmGGg'
+    );
+  expect(getallusers.statusCode).toBe(200);
+  expect(getallusers.headers['content-type']).toBe(
+    'application/json; charset=utf-8'
+  );
+  expect(getallusers.body.username).toBe('gthreadgall0');
+});
+
+// test('register user', async () => {
+//   const getallusers = await supertest(server).post('/register').send({
+//     username: 'rocky',
+//     password: 'test123',
+//   });
+
+//   expect(getallusers.statusCode).toBe(201);
+//   expect(getallusers.headers['content-type']).toBe(
+//     'application/json; charset=utf-8'
+//   );
+//   expect(getallusers.body.username).toBe('rocky');
+//   expect(getallusers.body.password).toBeDefined();
+// });
+
+// test('login user', async () => {
+//   const getallusers = await supertest(server).post('/login').send({
+//     username: 'bmarten3',
+//     password: 'test123',
+//   });
+
+//   expect(getallusers.statusCode).toBe(200);
+//   expect(getallusers.headers['content-type']).toBe(
+//     'application/json; charset=utf-8'
+//   );
+//   expect(getallusers.body.message).toBe('Welcome bmarten3!');
+//   expect(getallusers.body.userinfo.username).toBe('bmarten3');
+//   expect(getallusers.body.token).toBeDefined();
+// });
