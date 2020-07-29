@@ -114,7 +114,7 @@ All routes require authorization
 | storyAdded | datetime | yes      | no     | when the story was added or last updated |
 | storyDate  | datetime | no       | no     | title user gives to story                |
 | story      | string   | no       | yes    | title user gives to story(max 3000 char) |
-| photo      | string   | no       | no     | image url                                |
+| img        | string   | no       | no     | image url                                |
 
 ### Users
 ​
@@ -133,6 +133,6 @@ All routes require authorization
   storyAdded: datetime, ***REQUIRED***  
   storyDate: datetime,
   story: string, ***REQUIRED***  
-  photo: string (url)
+  img: string (url)
 }
 ```
