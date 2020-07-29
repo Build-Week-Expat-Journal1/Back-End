@@ -1,7 +1,7 @@
 
 # Expat Journal
 
-> 
+>Giving you a place to store, organize, and show off pictures and stories of your expat adventures.
 
 
 # Table of Contents
@@ -19,19 +19,27 @@
 ---
 ## Proposal
 
-<!-- Add this later -->
+Provides somewhere to keep photos and stories of where you’ve been, what you saw, what you did in an organized manner
 
 ## Target Audience
 
-<!-- Add this later -->
+Expats, people who want to become expats, others who want to organize their adventures
 
 
 ## Features
 
-<!-- add this later -->
+### What features are required for your minimum viable product?
+1. A user can visit site and see photos laid out in a grid
+2. A user can create, read, update, and delete stories and photos. (No ability to upload one's own photos for MVP)
 
-[**Read Full Product Vision Document**] 
-<!-- add this later this week -->
+### What features may you wish to put in a future release?
+1. Comment box where others can comment on the pictures
+2. Post videos
+3. Create a filter for tags/categories
+4. Upload a picture and add geolocation meta-data from picture or assign location of where it was taken
+
+
+[**Read Full Product Vision Document**](./files/Copy of Expat Journal PVD.pdf)
 
 ---
 # Contributors To This Project
@@ -39,7 +47,6 @@
 - Marketing Page: [Melanie Chele](https://github.com/melaniechele)
 - Front End Developer:[Anna Hangstefer](https://github.com/AHangstefer) & [E Jonathan Munoz](https://github.com/Johnjohnn)
 - Front End Framework Developers = [Sarah Lawrence](https://github.com/SarahMLawrence) & [Austin Healy](https://github.com/AustinJHealy)
-
 - Database and API-[Jennifer Weiner](https://github.com/weinerjm14) 
   
 
