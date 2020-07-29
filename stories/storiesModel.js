@@ -3,7 +3,7 @@ const db = require('../database/dbConfig');
 module.exports = {
   getAllStories,
   getStoryById,
-  // getStoryByUserName,
+  getStoryByUserName,
   getStoryByUserId,
   AddStory,
   updateStory,
@@ -19,28 +19,45 @@ function getStoryById(id) {
   return db('stories').select('*').where({ id }).first();
 }
 
-// function getStoryByUserName(username) {
-//   return db("stories as s")
-//     .join("users as u", "u.id", "s.user_id")
-//     .select("u.username", "s.id", "s.storyTitle", "s.storyDate", "s.story", "s.img")
-//     .where("u.username", username)
-//     .first();
-// }
-function getStoryByUserId(user_id) {
-  return db('stories').where(user_id);
+function getStoryByUserName(username) {
+  return db('stories as s')
+    .where('u.username', username)
+    .join('users as u', 'u.id', 's.user_id')
+    .select(
+      'u.username',
+      'u.id as user_id',
+      's.id as story_id',
+      's.storyTitle',
+      's.storyDate',
+      's.story',
+      's.img'
+    );
+}
+function getStoryByUserId(id) {
+  return db('stories as s')
+    .where('user_id', id)
+    .join('users as u', 'u.id', 's.user_id')
+    .select(
+      'u.username',
+      'u.id as user_id',
+      's.id as story_id',
+      's.storyTitle',
+      's.storyDate',
+      's.story',
+      's.img'
+    );
 }
 
 function AddStory(story) {
   return db('stories')
     .insert(story)
-    .then(id => {
-      getStoryById(id[0]);
+    .then(ids => {
+      getStoryById(ids[0]);
     });
 }
 
 function updateStory(id, changes) {
-  db('stories').where(id).update(changes);
-  return getStoryById(id);
+  return db('stories').where('id', id).update(changes);
 }
 
 function deleteStory(id) {

@@ -1,12 +1,12 @@
-const express = require("express");
-const bcrypt = require("bcryptjs");
-const Users = require("./usersModel");
-const restrict = require("../middleware/restrict");
-const jwt = require("jsonwebtoken");
+const express = require('express');
+const bcrypt = require('bcryptjs');
+const Users = require('./usersModel');
+const restrict = require('../middleware/restrict');
+const jwt = require('jsonwebtoken');
 // const validateUser = require("../middleware/verifyUser");
 const router = express.Router();
 
-router.get("/", restrict, async (req, res, next) => {
+router.get('/', restrict, async (req, res, next) => {
   try {
     const users = await Users.getAllUsers();
     res.status(200).json(users);
@@ -15,20 +15,20 @@ router.get("/", restrict, async (req, res, next) => {
   }
 });
 
-router.get("/:id", restrict, async (req, res, next) => {
+router.get('/:id', restrict, async (req, res, next) => {
   try {
     const id = req.params.id;
 
     const user = await Users.getUserById(id);
     if (!user) {
-      res.status(404).json({ message: "User not found" });
+      res.status(404).json({ message: 'User not found' });
     }
     res.status(200).json(user);
   } catch (err) {
     next(err);
   }
 });
-router.post("/register", async (req, res, next) => {
+router.post('/register', async (req, res, next) => {
   try {
     const { username, password } = req.body;
     const newUser = await Users.AddUser({
@@ -43,14 +43,14 @@ router.post("/register", async (req, res, next) => {
   }
 });
 
-router.post("/login", async (req, res, next) => {
+router.post('/login', async (req, res, next) => {
   try {
     const { username, password } = req.body;
     const user = await Users.getUserByUserName(username).first();
-    console.log(user)
+    console.log(user);
     if (!user) {
       return res.status(401).json({
-        message: "Invalid Credentials",
+        message: 'Invalid Credentials',
       });
     }
 
@@ -58,7 +58,7 @@ router.post("/login", async (req, res, next) => {
 
     if (!passwordValid) {
       return res.status(401).json({
-        message: "Invalid Credentials",
+        message: 'Invalid Credentials',
       });
     }
 
@@ -74,7 +74,7 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-router.put("/update/:id", restrict, async (req, res, next) => {
+router.put('/update/:id', restrict, async (req, res, next) => {
   try {
     const { username, password } = req.body;
     const id = req.params.id;
@@ -92,7 +92,7 @@ router.put("/update/:id", restrict, async (req, res, next) => {
   }
 });
 
-router.delete("/delete/:id", restrict, async (req, res, next) => {
+router.delete('/delete/:id', restrict, async (req, res, next) => {
   try {
     const id = req.params.id;
     await Users.deleteUser(id);
@@ -109,7 +109,7 @@ function generateToken(user) {
   };
 
   const options = {
-    expiresIn: "1d",
+    expiresIn: '1d',
   };
 
   return jwt.sign(payload, process.env.JWT_SECRET, options); // this method is synchronous

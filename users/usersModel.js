@@ -1,4 +1,4 @@
-const db = require("../database/dbConfig");
+const db = require('../database/dbConfig');
 
 module.exports = {
   getAllUsers,
@@ -10,19 +10,18 @@ module.exports = {
 };
 
 function getAllUsers() {
-  return db("users").select("*");
+  return db('users').select('*');
 }
 
 function getUserById(id) {
-  return db("users").where({ id }).first();
+  return db('users').where({ id }).first();
 }
 
 function getUserByUserName(username) {
-  return db("users").where({ username });
+  return db('users').where({ username });
 }
-
 function AddUser(user) {
-  return db("users")
+  return db('users')
     .insert(user)
     .then(ids => {
       return getUserById(ids[0]);
@@ -30,9 +29,9 @@ function AddUser(user) {
 }
 
 function updateUser(id, changes) {
-  return db("users").where({ id }).update(changes);
+  return db('users').where({ id }).update(changes);
 }
 
 function deleteUser(id) {
-  return db("users").where("id", id).del();
+  return db('users').where('id', id).del();
 }
