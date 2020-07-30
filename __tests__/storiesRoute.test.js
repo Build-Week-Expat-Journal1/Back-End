@@ -19,7 +19,7 @@ test('get all stories', async () => {
     .get('/stories')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo3LCJ1c2VybmFtZSI6ImRyYWNvIHRoZSBkcmFnb240IiwiaWF0IjoxNTk1OTc2ODc4LCJleHAiOjE1OTYwNjMyNzh9.M4bWMrbaJizL_8Mn972YFQJjfLc_Xhf5C5pRS3FmGGg'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
     );
   expect(getAllStories.statusCode).toBe(200);
   expect(getAllStories.headers['content-type']).toBe(
@@ -34,7 +34,7 @@ test('get story by  story id', async () => {
     .get('/stories/5')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo3LCJ1c2VybmFtZSI6ImRyYWNvIHRoZSBkcmFnb240IiwiaWF0IjoxNTk1OTc2ODc4LCJleHAiOjE1OTYwNjMyNzh9.M4bWMrbaJizL_8Mn972YFQJjfLc_Xhf5C5pRS3FmGGg'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
     );
   expect(getAllStories.statusCode).toBe(200);
   expect(getAllStories.headers['content-type']).toBe(
@@ -49,7 +49,7 @@ test('get story by username', async () => {
     .get('/stories/username/myacob2')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo3LCJ1c2VybmFtZSI6ImRyYWNvIHRoZSBkcmFnb240IiwiaWF0IjoxNTk1OTc2ODc4LCJleHAiOjE1OTYwNjMyNzh9.M4bWMrbaJizL_8Mn972YFQJjfLc_Xhf5C5pRS3FmGGg'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
     );
   expect(getAllStories.statusCode).toBe(200);
   expect(getAllStories.headers['content-type']).toBe(
@@ -64,7 +64,7 @@ test('get story by user id', async () => {
     .get('/stories/userid/4')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo3LCJ1c2VybmFtZSI6ImRyYWNvIHRoZSBkcmFnb240IiwiaWF0IjoxNTk1OTc2ODc4LCJleHAiOjE1OTYwNjMyNzh9.M4bWMrbaJizL_8Mn972YFQJjfLc_Xhf5C5pRS3FmGGg'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
     );
   expect(getAllStories.statusCode).toBe(200);
   expect(getAllStories.headers['content-type']).toBe(
@@ -80,7 +80,7 @@ test('add story', async () => {
     .post('/stories/add')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo3LCJ1c2VybmFtZSI6ImRyYWNvIHRoZSBkcmFnb240IiwiaWF0IjoxNTk1OTc2ODc4LCJleHAiOjE1OTYwNjMyNzh9.M4bWMrbaJizL_8Mn972YFQJjfLc_Xhf5C5pRS3FmGGg'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
     )
     .send({
       user_id: 4,
@@ -96,44 +96,44 @@ test('add story', async () => {
   expect(getAllStories.body.length).toBe(0);
 });
 
-// test('update story', async () => {
-//   const getAllStories = await supertest(server)
-//     .put('/update/3')
-//     .send({
-//       storyTitle: 'ran away',
-//       story: 'I runned so far away',
-//     })
-//     .set(
-//       'Authorization',
-//       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo2LCJ1c2VybmFtZSI6ImRyYWNvIHRoZSBkcmFnb240IiwiaWF0IjoxNTk2MDU4MTM0LCJleHAiOjE1OTYxNDQ1MzR9.jAphyRNxkU7hf47vXISWS9y7nCaIe0wEiEglKOi8kfk'
-//     );
-//   expect(getAllStories.statusCode).toBe(202);
-//   expect(getAllStories.headers['content-type']).toBe(
-//     'application/json; charset=utf-8'
-//   );
-//   expect(getAllStories.body.length).toBe(1);
-// });
+test('update story', async () => {
+  const getAllStories = await supertest(server)
+    .put('/stories/update/3')
+    .send({
+      storyTitle: 'ran away',
+      story: 'I runned so far away',
+    })
+    .set(
+      'Authorization',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
+    );
+  expect(getAllStories.statusCode).toBe(202);
+  expect(getAllStories.headers['content-type']).toBe(
+    'application/json; charset=utf-8'
+  );
+  expect(getAllStories.body.length).toBeUndefined();
+});
 
-// test('delete story', async () => {
-//   const getAllStories = await supertest(server)
-//     .delete('/delete/3')
-//     .set(
-//       'Authorization',
-//       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo3LCJ1c2VybmFtZSI6ImRyYWNvIHRoZSBkcmFnb240IiwiaWF0IjoxNTk1OTc2ODc4LCJleHAiOjE1OTYwNjMyNzh9.M4bWMrbaJizL_8Mn972YFQJjfLc_Xhf5C5pRS3FmGGg'
-//     );
-//   expect(getAllStories.statusCode).toBe(202);
-//   expect(getAllStories.headers['content-type']).toBe(
-//     'application/json; charset=utf-8'
-//   );
-//   expect(getAllStories.body.message).toBe('Story is gone');
-// });
+test('delete story', async () => {
+  const getAllStories = await supertest(server)
+    .delete('/stories/delete/3')
+    .set(
+      'Authorization',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
+    );
+  expect(getAllStories.statusCode).toBe(202);
+  expect(getAllStories.headers['content-type']).toBe(
+    'application/json; charset=utf-8'
+  );
+  expect(getAllStories.body.message).toBe('Story is gone');
+});
 
 test('get all users', async () => {
   const getallusers = await supertest(server)
     .get('/users')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo3LCJ1c2VybmFtZSI6ImRyYWNvIHRoZSBkcmFnb240IiwiaWF0IjoxNTk1OTc2ODc4LCJleHAiOjE1OTYwNjMyNzh9.M4bWMrbaJizL_8Mn972YFQJjfLc_Xhf5C5pRS3FmGGg'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
     );
   expect(getallusers.statusCode).toBe(200);
   expect(getallusers.headers['content-type']).toBe(
@@ -147,7 +147,7 @@ test('get user by id', async () => {
     .get('/users/1')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo3LCJ1c2VybmFtZSI6ImRyYWNvIHRoZSBkcmFnb240IiwiaWF0IjoxNTk1OTc2ODc4LCJleHAiOjE1OTYwNjMyNzh9.M4bWMrbaJizL_8Mn972YFQJjfLc_Xhf5C5pRS3FmGGg'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
     );
   expect(getallusers.statusCode).toBe(200);
   expect(getallusers.headers['content-type']).toBe(
@@ -156,31 +156,64 @@ test('get user by id', async () => {
   expect(getallusers.body.username).toBe('gthreadgall0');
 });
 
-// test('register user', async () => {
-//   const getallusers = await supertest(server).post('/register').send({
-//     username: 'rocky',
-//     password: 'test123',
-//   });
+test('register user', async () => {
+  const getallusers = await supertest(server).post('/users/register').send({
+    username: 'rocky',
+    password: 'test123',
+  });
 
-//   expect(getallusers.statusCode).toBe(201);
-//   expect(getallusers.headers['content-type']).toBe(
-//     'application/json; charset=utf-8'
-//   );
-//   expect(getallusers.body.username).toBe('rocky');
-//   expect(getallusers.body.password).toBeDefined();
-// });
+  expect(getallusers.statusCode).toBe(201);
+  expect(getallusers.headers['content-type']).toBe(
+    'application/json; charset=utf-8'
+  );
+  expect(getallusers.body.username).toBe('rocky');
+  expect(getallusers.body.password).toBeDefined();
+});
 
-// test('login user', async () => {
-//   const getallusers = await supertest(server).post('/login').send({
-//     username: 'bmarten3',
-//     password: 'test123',
-//   });
+test('login user', async () => {
+  const getallusers = await supertest(server).post('/users/login').send({
+    username: 'bmarten3',
+    password: 'test123',
+  });
 
-//   expect(getallusers.statusCode).toBe(200);
-//   expect(getallusers.headers['content-type']).toBe(
-//     'application/json; charset=utf-8'
-//   );
-//   expect(getallusers.body.message).toBe('Welcome bmarten3!');
-//   expect(getallusers.body.userinfo.username).toBe('bmarten3');
-//   expect(getallusers.body.token).toBeDefined();
-// });
+  expect(getallusers.statusCode).toBe(200);
+  expect(getallusers.headers['content-type']).toBe(
+    'application/json; charset=utf-8'
+  );
+  
+  expect(getallusers.body.message).toBe('Welcome bmarten3!');
+  expect(getallusers.body.userInfo.username).toBe('bmarten3');
+  expect(getallusers.body.token).toBeDefined();
+});
+
+test('update user', async () => {
+  const getallusers = await supertest(server)
+    .put('/users/update/1')
+    .send({
+      username: 'draco',
+      password: 'test123',
+    })
+    .set(
+      'Authorization',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
+    );
+  expect(getallusers.statusCode).toBe(201);
+  expect(getallusers.headers['content-type']).toBe(
+    'application/json; charset=utf-8'
+  );
+  expect(getallusers.body.username).toBe('draco');
+});
+
+test('delete user', async () => {
+  const getallusers = await supertest(server)
+    .delete('/users/delete/1')
+    .set(
+      'Authorization',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
+    );
+  expect(getallusers.statusCode).toBe(204);
+  expect(getallusers.headers['content-type']).toBe(
+    'application/json; charset=utf-8'
+  );
+  expect(getallusers.body).toBeUndefined();
+});
