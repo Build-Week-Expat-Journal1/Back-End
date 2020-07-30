@@ -115,15 +115,15 @@ All routes require authorization
 | password | string  | yes      | no     | users password            |
 
 # Stories
-| Name       | Type     | Required | Unique | Notes                                    |
-| ---------- | -------- | -------- | ------ | ---------------------------------------- |
-| id         | integer  | yes      | yes    | story id (auto generated)                |
-| user_id    | integer  | yes      | yes    | references the id in the user table      |
-| storyTitle | string   | no       | no     | title user gives to story                |
-| storyAdded | datetime | yes      | no     | when the story was added or last updated |
-| storyDate  | datetime | no       | no     | title user gives to story                |
-| story      | string   | yes      | no     | the users story (max 3000 char)          |
-| img        | string   | no       | no     | image url                                |
+| Name       | Type    | Required | Unique | Notes                                    |
+| ---------- | ------- | -------- | ------ | ---------------------------------------- |
+| id         | integer | yes      | yes    | story id (auto generated)                |
+| user_id    | integer | yes      | yes    | references the id in the user table      |
+| storyTitle | string  | no       | no     | title user gives to story                |
+| storyAdded | string  | yes      | no     | when the story was added or last updated |
+| storyDate  | string  | no       | no     | title user gives to story                |
+| story      | string  | yes      | no     | the users story (max 3000 char)          |
+| img        | string  | no       | no     | image url                                |
 
 ### Users
 ​
