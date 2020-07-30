@@ -36,8 +36,9 @@ router.post('/register', async (req, res, next) => {
 
       password: await bcrypt.hash(password, 10),
     });
+    const token = generateToken(newUser);
 
-    res.status(201).json(newUser);
+    res.status(201).json({ newUser, token });
   } catch (err) {
     next(err);
   }
