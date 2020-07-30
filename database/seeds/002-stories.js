@@ -2,7 +2,7 @@ exports.seed = function (knex) {
   return knex(`stories`).insert([
     {
       user_id: 1,
-      storytitle: `Shine of Rainbows, A`,
+      storyTitle: `Shine of Rainbows, A`,
       storyAdded: `8/21/2019`,
       storyDate: `5/11/2020`,
       story: `Pressgang gunwalls Blimey crack Jennys tea cup sloop lugger line aye rum reef. Skysail coffer handsomely prow gangway parley driver fathom interloper league. Bring a spring upon her cable rum no prey, no pay Jolly Roger hail-shot heave down Barbary Coast jury mast chandler gaff. 
@@ -12,7 +12,7 @@ exports.seed = function (knex) {
     },
     {
       user_id: 3,
-      storytitle: `it was a long night`,
+      storyTitle: `it was a long night`,
       storyDate: `5/11/2020`,
       storyAdded: `5/31/2020`,
       story: `Arabica Acerbic Affogato Aftertaste Aged Americano And Aroma breve, plunger organic shot whipped saucer id . Body mazagran id Con latte viennese At macchiato Cappuccino, lungo foam Aged Aroma redeye Au acerbic, iced and saucer cup skinny dripper con. Go ristretto Cappuccino flavour est con affogato single extraction body, id variety dripper whipped shot that lungo et, Americano  arabica foam shop breve fair Body. Sweet Arabica Acerbic sugar shop cream Bar press half bar, body single Aftertaste redeye barista rich qui spoon, shot at mazagran dripper extra id con cappuccino. Variety As white half And decaffeinated caramelization extraction, dripper as latte Au Barista acerbic, body shot Beans carajillo sit Arabica.
@@ -22,7 +22,7 @@ exports.seed = function (knex) {
 
     {
       user_id: 2,
-      storytitle: `Romero`,
+      storyTitle: `Romero`,
       storyAdded: `3/11/2020`,
       storyDate: `5/31/2020`,
       story: `Pitchfork authentic woke tattooed. Occupy la croix unicorn banjo, put a bird on it farm-to-table fingerstache jean shorts pug DIY gochujang. Edison bulb mustache meggings iceland, put a bird on it scenester pitchfork vaporware pinterest plaid four loko actually. Leggings flexitarian chillwave viral gochujang lumbersexual gluten-free semiotics deep v authentic, crucifix mumblecore umami swag chia.
@@ -38,7 +38,7 @@ exports.seed = function (knex) {
     },
     {
       user_id: 3,
-      storytitle: `Bullet to the Head`,
+      storyTitle: `Bullet to the Head`,
       storyAdded: `8/7/2019`,
       storyDate: `6/11/2020`,
       story: `I love cheese, especially danish fontina emmental. Melted cheese lancashire st. agur blue cheese cauliflower cheese stinking bishop melted cheese rubber cheese bocconcini. Cheese and biscuits melted cheese squirty cheese port-salut smelly cheese fromage frais manchego cheese strings. Edam who moved my cheese cheesy grin stinking bishop cheese and wine babybel gouda queso. St. agur blue cheese the big cheese macaroni cheese.
@@ -54,7 +54,7 @@ exports.seed = function (knex) {
     },
     {
       user_id: 4,
-      storytitle: null,
+      storyTitle: null,
       storyAdded: `10/14/2019`,
       storyDate: `12/19/2019`,
       story: `Cheesecake ice cream sesame snaps muffin sweet cake. Liquorice I love dragée powder jelly beans marshmallow biscuit jujubes. Tart marzipan jelly-o gummies pastry biscuit. I love toffee soufflé marshmallow dragée.
@@ -66,7 +66,7 @@ exports.seed = function (knex) {
     },
     {
       user_id: 5,
-      storytitle: `Adventures of a Dentist`,
+      storyTitle: `Adventures of a Dentist`,
       storyAdded: `3/12/2020`,
       storyDate: `2/24/2020`,
       story: `Twitch tail in permanent irritation ears back wide eyed for this is the day . Meow all night stare at ceiling light. Jump off balcony, onto stranger's head bleghbleghvomit my furball really tie the room together and the dog smells bad. And sometimes switches in french and say "miaou" just because well why not licks your face so poop in the plant pot but woops poop hanging from butt must get rid run run around house drag poop on floor maybe it comes off woops left brown marks on floor human slave clean lick butt now, yet chase dog then run away. Mouse chase after silly colored fish toys around the house yet find a way to fit in tiny box sit in a box for hours scratch me there, elevator butt claw at curtains stretch and yawn nibble on tuna ignore human bite human hand. 𝕄𝔼𝕆𝕎 you have cat to be kitten me right meow run up and down stairs, i show my fluffy belly but it's a trap! if you pet it i will tear up your hand always ensure to lay down in such a manner that tail can lightly brush human's nose or in the middle of the night i crawl onto your chest and purr gently to help you sleep eat all the power cords. Ask to be pet then attack owners hand lick the other cats or the cat was chasing the mouse. Cat mojo ask to be pet then attack owners hand meow for food, then when human fills food dish, take a few bites of food and continue meowing. Get suspicious of own shadow then go play with toilette paper. The door is opening! how exciting oh, it's you, meh my cat stared at me he was sipping his tea, too my slave human didn't give me any food so i pooped on the floor destroy couch as revenge and stand in doorway, unwilling to chose whether to stay in or go out. It's 3am, time to create some chaos fight own tail but instead of drinking water from the cat bowl, make sure to steal water from the toilet. Sit on human really likes hummus sit on the laptop, a nice warm laptop for me to sit on. Walk on keyboard bite plants for put toy mouse in food bowl run out of litter box at full speed a nice warm laptop for me to sit on yet stare at guinea pigs, it's 3am, time to create some chaos mewl for food at 4am. Get suspicious of own shadow then go play with toilette paper stare at owner accusingly then wink. I can haz. Jump off balcony, onto stranger's head.

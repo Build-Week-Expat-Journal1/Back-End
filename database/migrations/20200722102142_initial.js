@@ -13,10 +13,10 @@ exports.up = async function (knex) {
         .notNull()
         .onUpdate('CASCADE')
         .onDelete('CASCADE');
-    table.text('storyTitle'), table.datetime('storyAdded').notNull();
-    table.datetime('storyDate'),
-      table.text('story').notNull(),
-      table.text('img');
+    table.text('storyTitle');
+    table.text('storyAdded').notNull();
+    table.text('storyDate');
+    table.text('story').notNull(), table.text('img');
   });
 };
 
