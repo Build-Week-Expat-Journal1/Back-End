@@ -77,34 +77,34 @@ This project was done during a build week sprint at [Lambda School](https://lamb
 # Documentation:
 
 ## Base URL for Deployed API
-https://expat-journal-prod.herokuapp.com/
+https://expat-journal-prod.herokuapp.com
 
 
 ## Endpoints
 
 ### Users
-| Request | URL              | Description                                      |
-| ------- | ---------------- | ------------------------------------------------ |
-| GET     | users/           | list all users, requires authorization           |
-| GET     | users/:id        | get user by their id, requires authorization     |
-| POST    | users/register   | register as a new user                           |
-| POST    | users/login      | login as an existing user                        |
-| PUT     | users/update/:id | update users information, requires authorization |
-| DELETE  | users/delete/:id | delete the user, requires authorization          |
+| Request | URL               | Description                                      |
+| ------- | ----------------- | ------------------------------------------------ |
+| GET     | /users            | list all users, requires authorization           |
+| GET     | /users/:id        | get user by their id, requires authorization     |
+| POST    | /users/register   | register as a new user                           |
+| POST    | /users/login      | login as an existing user                        |
+| PUT     | /users/update/:id | update users information, requires authorization |
+| DELETE  | /users/delete/:id | delete the user, requires authorization          |
 
 ### Stories
 
 All routes require authorization
 
-| Request | URL                  | Description                                                         |
-| ------- | -------------------- | ------------------------------------------------------------------- |
-| GET     | stories/             | returns all stories in database                                     |
-| GET     | stories/:id          | returns the story with that id                                      |
-| GET     | stories/username/:id | returns all stories for that username (use the username at the :id) |
-| GET     | stories/userid/:id   | returns the story with that user_id                                 |
-| POST    | stories/add          | user can add a new story                                            |
-| PUT     | stories/update/:id   | update story with that id                                           |
-| DELETE  | stories/delete/:id   | delete the story with that id                                       |
+| Request | URL                   | Description                                                         |
+| ------- | --------------------- | ------------------------------------------------------------------- |
+| GET     | /stories              | returns all stories in database                                     |
+| GET     | /stories/:id          | returns the story with that id                                      |
+| GET     | /stories/username/:id | returns all stories for that username (use the username at the :id) |
+| GET     | /stories/userid/:id   | returns the story with that user_id                                 |
+| POST    | /stories/add          | user can add a new story                                            |
+| PUT     | /stories/update/:id   | update story with that id                                           |
+| DELETE  | /stories/delete/:id   | delete the story with that id                                       |
 
 
 # Table Requirements
