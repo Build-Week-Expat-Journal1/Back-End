@@ -58,8 +58,9 @@ Expats, people who want to become expats, others who want to organize their adve
 3. Knex
 4. nodemon
 5. jsonwebtoken
-6. sqlite3
-7. Jest and supertest
+6. sqlite3 for development and testing
+7. postgres in production
+8. Jest and supertest
 
 # Project Info
 This project was done during a build week sprint at [Lambda School](https://lambdaschool.com). Part time students stretch this build over two weeks. They have 9 class nights of 3 hours to work on the project, complete stand up meetings before every day and at the end of specified days, and one timed, multiple-choice assessment for the unit they have just completed. Students work in cross-functional teams using GitHub, Trello, Slack, and Zoom to facilitate remote work.
@@ -115,15 +116,15 @@ All routes require authorization
 | password | string  | yes      | no     | users password            |
 
 # Stories
-| Name       | Type     | Required | Unique | Notes                                    |
-| ---------- | -------- | -------- | ------ | ---------------------------------------- |
-| id         | integer  | yes      | yes    | story id (auto generated)                |
-| user_id    | integer  | yes      | yes    | references the id in the user table      |
-| storyTitle | string   | no       | no     | title user gives to story                |
-| storyAdded | datetime | yes      | no     | when the story was added or last updated |
-| storyDate  | datetime | no       | no     | title user gives to story                |
-| story      | string   | yes      | no     | the users story (max 3000 char)          |
-| img        | string   | no       | no     | image url                                |
+| Name       | Type    | Required | Unique | Notes                                    |
+| ---------- | ------- | -------- | ------ | ---------------------------------------- |
+| id         | integer | yes      | yes    | story id (auto generated)                |
+| user_id    | integer | yes      | yes    | references the id in the user table      |
+| storyTitle | string  | no       | no     | title user gives to story                |
+| storyAdded | string  | yes      | no     | when the story was added or last updated |
+| storyDate  | string  | no       | no     | title user gives to story                |
+| story      | string  | yes      | no     | the users story (max 3000 char)          |
+| img        | string  | no       | no     | image url                                |
 
 ### Users
 ​
