@@ -140,8 +140,8 @@ All routes require authorization
 {
   user_id: integer, ***REQUIRED***  
   storyTitle: string,
-  storyAdded: datetime, ***REQUIRED***  
-  storyDate: datetime,
+  storyAdded: string, ***REQUIRED***  
+  storyDate: string,
   story: string, ***REQUIRED***  
   img: string (url)
 }
