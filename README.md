@@ -58,8 +58,9 @@ Expats, people who want to become expats, others who want to organize their adve
 3. Knex
 4. nodemon
 5. jsonwebtoken
-6. sqlite3
-7. Jest and supertest
+6. sqlite3 for development and testing
+7. postgres in production
+8. Jest and supertest
 
 # Project Info
 This project was done during a build week sprint at [Lambda School](https://lambdaschool.com). Part time students stretch this build over two weeks. They have 9 class nights of 3 hours to work on the project, complete stand up meetings before every day and at the end of specified days, and one timed, multiple-choice assessment for the unit they have just completed. Students work in cross-functional teams using GitHub, Trello, Slack, and Zoom to facilitate remote work.
@@ -76,34 +77,34 @@ This project was done during a build week sprint at [Lambda School](https://lamb
 # Documentation:
 
 ## Base URL for Deployed API
-https://expat-journal-prod.herokuapp.com/
+https://expat-journal-prod.herokuapp.com
 
 
 ## Endpoints
 
 ### Users
-| Request | URL              | Description                                      |
-| ------- | ---------------- | ------------------------------------------------ |
-| GET     | users/           | list all users, requires authorization           |
-| GET     | users/:id        | get user by their id, requires authorization     |
-| POST    | users/register   | register as a new user                           |
-| POST    | users/login      | login as an existing user                        |
-| PUT     | users/update/:id | update users information, requires authorization |
-| DELETE  | users/delete/:id | delete the user, requires authorization          |
+| Request | URL               | Description                                      |
+| ------- | ----------------- | ------------------------------------------------ |
+| GET     | /users            | list all users, requires authorization           |
+| GET     | /users/:id        | get user by their id, requires authorization     |
+| POST    | /users/register   | register as a new user                           |
+| POST    | /users/login      | login as an existing user                        |
+| PUT     | /users/update/:id | update users information, requires authorization |
+| DELETE  | /users/delete/:id | delete the user, requires authorization          |
 
 ### Stories
 
 All routes require authorization
 
-| Request | URL                  | Description                                                         |
-| ------- | -------------------- | ------------------------------------------------------------------- |
-| GET     | stories/             | returns all stories in database                                     |
-| GET     | stories/:id          | returns the story with that id                                      |
-| GET     | stories/username/:id | returns all stories for that username (use the username at the :id) |
-| GET     | stories/userid/:id   | returns the story with that user_id                                 |
-| POST    | stories/add          | user can add a new story                                            |
-| PUT     | stories/update/:id   | update story with that id                                           |
-| DELETE  | stories/delete/:id   | delete the story with that id                                       |
+| Request | URL                   | Description                                                         |
+| ------- | --------------------- | ------------------------------------------------------------------- |
+| GET     | /stories              | returns all stories in database                                     |
+| GET     | /stories/:id          | returns the story with that id                                      |
+| GET     | /stories/username/:id | returns all stories for that username (use the username at the :id) |
+| GET     | /stories/userid/:id   | returns the story with that user_id                                 |
+| POST    | /stories/add          | user can add a new story                                            |
+| PUT     | /stories/update/:id   | update story with that id                                           |
+| DELETE  | /stories/delete/:id   | delete the story with that id                                       |
 
 
 # Table Requirements
@@ -115,15 +116,15 @@ All routes require authorization
 | password | string  | yes      | no     | users password            |
 
 # Stories
-| Name       | Type     | Required | Unique | Notes                                    |
-| ---------- | -------- | -------- | ------ | ---------------------------------------- |
-| id         | integer  | yes      | yes    | story id (auto generated)                |
-| user_id    | integer  | yes      | yes    | references the id in the user table      |
-| storyTitle | string   | no       | no     | title user gives to story                |
-| storyAdded | datetime | yes      | no     | when the story was added or last updated |
-| storyDate  | datetime | no       | no     | title user gives to story                |
-| story      | string   | yes      | no     | the users story (max 3000 char)          |
-| img        | string   | no       | no     | image url                                |
+| Name       | Type    | Required | Unique | Notes                                    |
+| ---------- | ------- | -------- | ------ | ---------------------------------------- |
+| id         | integer | yes      | yes    | story id (auto generated)                |
+| user_id    | integer | yes      | yes    | references the id in the user table      |
+| storyTitle | string  | no       | no     | title user gives to story                |
+| storyAdded | string  | yes      | no     | when the story was added or last updated |
+| storyDate  | string  | no       | no     | title user gives to story                |
+| story      | string  | yes      | no     | the users story (max 3000 char)          |
+| img        | string  | no       | no     | image url                                |
 
 ### Users
 ​
@@ -139,8 +140,8 @@ All routes require authorization
 {
   user_id: integer, ***REQUIRED***  
   storyTitle: string,
-  storyAdded: datetime, ***REQUIRED***  
-  storyDate: datetime,
+  storyAdded: string, ***REQUIRED***  
+  storyDate: string,
   story: string, ***REQUIRED***  
   img: string (url)
 }

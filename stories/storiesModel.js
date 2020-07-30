@@ -50,7 +50,7 @@ function getStoryByUserId(id) {
 
 function AddStory(story) {
   return db('stories')
-    .insert(story)
+    .insert(story, 'id')
     .then(ids => {
       getStoryById(ids[0]);
     });

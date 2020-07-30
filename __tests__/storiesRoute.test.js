@@ -166,8 +166,9 @@ test('register user', async () => {
   expect(getallusers.headers['content-type']).toBe(
     'application/json; charset=utf-8'
   );
-  expect(getallusers.body.username).toBe('rocky');
-  expect(getallusers.body.password).toBeDefined();
+  expect(getallusers.body.newUser.username).toBe('rocky');
+  expect(getallusers.body.newUser.password).toBeDefined();
+  expect(getallusers.body.token).toBeDefined();
 });
 
 test('login user', async () => {
@@ -180,7 +181,7 @@ test('login user', async () => {
   expect(getallusers.headers['content-type']).toBe(
     'application/json; charset=utf-8'
   );
-  
+
   expect(getallusers.body.message).toBe('Welcome bmarten3!');
   expect(getallusers.body.userInfo.username).toBe('bmarten3');
   expect(getallusers.body.token).toBeDefined();
@@ -206,14 +207,11 @@ test('update user', async () => {
 
 test('delete user', async () => {
   const getallusers = await supertest(server)
-    .delete('/users/delete/1')
+    .delete('/users/delete/3')
     .set(
       'Authorization',
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
     );
   expect(getallusers.statusCode).toBe(204);
-  expect(getallusers.headers['content-type']).toBe(
-    'application/json; charset=utf-8'
-  );
-  expect(getallusers.body).toBeUndefined();
+  expect(getallusers.headers['content-type']).toBeUndefined();
 });
