@@ -96,15 +96,15 @@ https://expat-journal-prod.herokuapp.com
 
 All routes require authorization
 
-| Request | URL                   | Description                                                         |
-| ------- | --------------------- | ------------------------------------------------------------------- |
-| GET     | /stories              | returns all stories in database                                     |
-| GET     | /stories/:id          | returns the story with that id                                      |
-| GET     | /stories/username/:id | returns all stories for that username (use the username at the :id) |
-| GET     | /stories/userid/:id   | returns the story with that user_id                                 |
-| POST    | /stories/add          | user can add a new story                                            |
-| PUT     | /stories/update/:id   | update story with that id                                           |
-| DELETE  | /stories/delete/:id   | delete the story with that id                                       |
+| Request | URL                   | Description                                                                                           |
+| ------- | --------------------- | ----------------------------------------------------------------------------------------------------- |
+| GET     | /stories              | returns all stories in database                                                                       |
+| GET     | /stories/:id          | returns the story with that id                                                                        |
+| GET     | /stories/username/:id | returns all stories for that username (use the username at the :id)                                   |
+| GET     | /stories/userid/:id   | returns the story with that user_id                                                                   |
+| POST    | /stories/add          | user can add a new story  (must send all required fields *see [stories table requirements](#stories)) |
+| PUT     | /stories/update/:id   | update story with that id                                                                             |
+| DELETE  | /stories/delete/:id   | delete the story with that id                                                                         |
 
 
 # Table Requirements

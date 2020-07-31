@@ -31,6 +31,12 @@ router.get('/:id', restrict, async (req, res, next) => {
 router.post('/register', async (req, res, next) => {
   try {
     const { username, password } = req.body;
+    if (!username || !password) {
+      return res.status(400).json({
+        message:
+          'required field(s) missing. Please try again with all required fields.',
+      });
+    }
     const newUser = await Users.AddUser({
       username,
 
@@ -47,6 +53,12 @@ router.post('/register', async (req, res, next) => {
 router.post('/login', async (req, res, next) => {
   try {
     const { username, password } = req.body;
+    if (!username || !password) {
+      return res.status(400).json({
+        message:
+          'required field(s) missing. Please try again with all required fields.',
+      });
+    }
     const user = await Users.getUserByUserName(username).first();
     console.log(user);
     if (!user) {
@@ -79,7 +91,12 @@ router.put('/update/:id', restrict, async (req, res, next) => {
   try {
     const { username, password } = req.body;
     const id = req.params.id;
-
+    if (!username || !password) {
+      return res.status(400).json({
+        message:
+          'required field(s) missing. Please try again with all required fields.',
+      });
+    }
     const newUser = await Users.updateUser(id, {
       username,
 
