@@ -19,7 +19,7 @@ test('get all stories', async () => {
     .get('/stories')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MTQ4MDI5LCJleHAiOjE1OTYyMzQ0Mjl9.kzKBMGpJV0qeuSroMha3NO70Qz1gsz6r1_ock9r9t-8'
     );
   expect(getAllStories.statusCode).toBe(200);
   expect(getAllStories.headers['content-type']).toBe(
@@ -34,7 +34,7 @@ test('get story by  story id', async () => {
     .get('/stories/5')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MTQ4MDI5LCJleHAiOjE1OTYyMzQ0Mjl9.kzKBMGpJV0qeuSroMha3NO70Qz1gsz6r1_ock9r9t-8'
     );
   expect(getAllStories.statusCode).toBe(200);
   expect(getAllStories.headers['content-type']).toBe(
@@ -49,7 +49,7 @@ test('get story by username', async () => {
     .get('/stories/username/myacob2')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MTQ4MDI5LCJleHAiOjE1OTYyMzQ0Mjl9.kzKBMGpJV0qeuSroMha3NO70Qz1gsz6r1_ock9r9t-8'
     );
   expect(getAllStories.statusCode).toBe(200);
   expect(getAllStories.headers['content-type']).toBe(
@@ -64,7 +64,7 @@ test('get story by user id', async () => {
     .get('/stories/userid/4')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MTQ4MDI5LCJleHAiOjE1OTYyMzQ0Mjl9.kzKBMGpJV0qeuSroMha3NO70Qz1gsz6r1_ock9r9t-8'
     );
   expect(getAllStories.statusCode).toBe(200);
   expect(getAllStories.headers['content-type']).toBe(
@@ -80,7 +80,7 @@ test('add story', async () => {
     .post('/stories/add')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MTQ4MDI5LCJleHAiOjE1OTYyMzQ0Mjl9.kzKBMGpJV0qeuSroMha3NO70Qz1gsz6r1_ock9r9t-8'
     )
     .send({
       user_id: 4,
@@ -105,7 +105,7 @@ test('update story', async () => {
     })
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MTQ4MDI5LCJleHAiOjE1OTYyMzQ0Mjl9.kzKBMGpJV0qeuSroMha3NO70Qz1gsz6r1_ock9r9t-8'
     );
   expect(getAllStories.statusCode).toBe(202);
   expect(getAllStories.headers['content-type']).toBe(
@@ -119,7 +119,7 @@ test('delete story', async () => {
     .delete('/stories/delete/3')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MTQ4MDI5LCJleHAiOjE1OTYyMzQ0Mjl9.kzKBMGpJV0qeuSroMha3NO70Qz1gsz6r1_ock9r9t-8'
     );
   expect(getAllStories.statusCode).toBe(202);
   expect(getAllStories.headers['content-type']).toBe(
@@ -133,7 +133,7 @@ test('get all users', async () => {
     .get('/users')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MTQ4MDI5LCJleHAiOjE1OTYyMzQ0Mjl9.kzKBMGpJV0qeuSroMha3NO70Qz1gsz6r1_ock9r9t-8'
     );
   expect(getallusers.statusCode).toBe(200);
   expect(getallusers.headers['content-type']).toBe(
@@ -147,7 +147,7 @@ test('get user by id', async () => {
     .get('/users/1')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MTQ4MDI5LCJleHAiOjE1OTYyMzQ0Mjl9.kzKBMGpJV0qeuSroMha3NO70Qz1gsz6r1_ock9r9t-8'
     );
   expect(getallusers.statusCode).toBe(200);
   expect(getallusers.headers['content-type']).toBe(
@@ -196,7 +196,7 @@ test('update user', async () => {
     })
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MTQ4MDI5LCJleHAiOjE1OTYyMzQ0Mjl9.kzKBMGpJV0qeuSroMha3NO70Qz1gsz6r1_ock9r9t-8'
     );
   expect(getallusers.statusCode).toBe(201);
   expect(getallusers.headers['content-type']).toBe(
@@ -210,7 +210,7 @@ test('delete user', async () => {
     .delete('/users/delete/3')
     .set(
       'Authorization',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MDY2MjQzLCJleHAiOjE1OTYxNTI2NDN9.ueSkffECO4TD8S_V_loBhhMxsYdIlmAoU1-4urIvD-s'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJ1c2VybmFtZSI6ImJtYXJ0ZW4zIiwiaWF0IjoxNTk2MTQ4MDI5LCJleHAiOjE1OTYyMzQ0Mjl9.kzKBMGpJV0qeuSroMha3NO70Qz1gsz6r1_ock9r9t-8'
     );
   expect(getallusers.statusCode).toBe(204);
   expect(getallusers.headers['content-type']).toBeUndefined();
